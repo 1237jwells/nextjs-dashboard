@@ -41,15 +41,13 @@ export default async function InvoicesTable({
                 </div>
                 <div className="flex w-full items-center justify-between pt-4">
                   <div>
-                    <p className="text-xl font-medium">
-                      {formatCurrency(invoice.amount)}
-                    </p>
+                    <p className="text-xl font-medium">{formatCurrency(invoice.amount)}</p>
                     <p>{formatDateToLocal(invoice.date)}</p>
                   </div>
-                  <div className="flex justify-end gap-2">
+                  <td className="flex justify-end gap-2 whitespace-nowrap px-6 py-4 text-sm">
                     <UpdateInvoice id={invoice.id} />
                     <DeleteInvoice id={invoice.id} />
-                  </div>
+                  </td>
                 </div>
               </div>
             ))}
